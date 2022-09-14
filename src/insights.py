@@ -33,7 +33,6 @@ def get_unique_industries(path):
     for job in jobs:
         if job['industry'] != '':
             industries.add(job['industry'])
-    print(industries)
     return industries
 
 
