@@ -54,6 +54,16 @@ def filter_by_industry(jobs, industry):
     return []
 
 
+def get_min_salary(path):
+    jobs = read(path)
+    salaries = set()
+    for job in jobs:
+        if job['min_salary'] != '':
+            salaries.add(int(job['min_salary']))
+    lowest_salary = min(salaries)
+    return lowest_salary
+
+
 def get_max_salary(path):
     jobs = read(path)
     salaries = set()
